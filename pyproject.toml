@@ -1,12 +1,13 @@
 [tool.poetry]
-name = "any_python_template"
-version = "0.1.0"
+name = "comfig"
+version = "0.2.0"
 description = ""
 authors = ["Stanislav Zmiev <szmiev2000@gmail.com>"]
 license = "MIT"
 
 [tool.poetry.dependencies]
 python = "^3.8"
+typer = "^0.6.1"
 
 [tool.poetry.dev-dependencies]
 pyupgrade = "^2.37.3"
