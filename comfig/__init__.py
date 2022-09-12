@@ -15,7 +15,7 @@ def version_callback(value: bool):
 
 
 def get_typer(filename: str) -> typer.Typer:
-    app = typer.Typer(add_completion=False)
+    app = typer.Typer(name="config", add_completion=False)
     comfig = Comfig(filename)
 
     @app.command()
@@ -25,6 +25,7 @@ def get_typer(filename: str) -> typer.Typer:
     @app.command()
     def set(field: str, value: str):
         comfig[field] = value
+        comfig.save(comfig.user)
 
     @app.command()
     def list():
